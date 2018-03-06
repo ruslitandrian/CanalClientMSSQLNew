@@ -15,11 +15,11 @@ vipcoder:
     writePrefix: insert*,update*,delete*
     targets:
       w_0:
-        url: jdbc:sqlserver://172.16.2.65:1433; DatabaseName=BI_Canal
-        username: bi_canal_acct
-        password: n5r6H2K'Q<e@
+        url: jdbc:sqlserver://XXX.XXX.XXX.XXX:1433; DatabaseName=BI_Canal
+        username: XXX
+        password: XXX
         master: true
       r_0:
-        url: jdbc:sqlserver://172.16.2.65:1433; DatabaseName=BI_Canal
-        username: bi_canal_acct
-        password: n5r6H2K'Q<e@
+        url: jdbc:sqlserver://XXX.XXX.XXX.XXX:1433; DatabaseName=BI_Canal
+        username: XXX
+        password: XXX

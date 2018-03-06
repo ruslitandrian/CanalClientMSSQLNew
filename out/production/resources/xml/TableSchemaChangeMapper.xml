@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.tutorabc.test.mapper.TableSchemaChangeMapper">
+<mapper namespace="com.demo.test.mapper.TableSchemaChangeMapper">
 
 	<!-- 通用查询映射结果 -->
-	<resultMap id="BaseResultMap" type="com.tutorabc.test.entity.TableSchemaChange">
+	<resultMap id="BaseResultMap" type="com.demo.test.entity.TableSchemaChange">
 		<id column="Sn" property="Sn" />
 		<result column="TableName" property="TableName" />
 		<result column="Scripts" property="Scripts" />
@@ -15,7 +15,7 @@
         valid, evaluation_type AS evaluationType, sn, question_str AS questionStr, test_sn AS testSn, total_score AS totalScore, inp_date AS inpDate, client_sn AS clientSn, client_level AS clientLevel
     </sql>
     -->
-	<insert id="insertId" parameterType="com.tutorabc.test.entity.TableSchemaChange" useGeneratedKeys="true" keyProperty="Sn" keyColumn="Sn">
+	<insert id="insertId" parameterType="com.demo.test.entity.TableSchemaChange" useGeneratedKeys="true" keyProperty="Sn" keyColumn="Sn">
 		INSERT INTO TableSchemaChange (TableName,Scripts,CreatedAt)
 		VALUE (#{TableName},#{Scripts},GETDATE())
 		<selectKey keyProperty="Sn" resultType="int" order="AFTER">
