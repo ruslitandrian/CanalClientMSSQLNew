@@ -1,0 +1,59 @@
+buildscript {
+    ext {
+        springBootVersion = '1.5.6.RELEASE'
+            }
+    repositories {
+        maven {
+            //url "http://maven.aliyun.com/nexus/content/groups/public/"
+            url "http://maven.vipjr.com/nexus/content/groups/public/"
+        }
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+
+jar {
+    baseName = 'demo'
+    version = '0.0.1-SNAPSHOT'
+}
+
+sourceCompatibility = 1.8
+
+repositories {
+    maven {
+        //url "http://maven.aliyun.com/nexus/content/groups/public/"
+        url "http://maven.vipjr.com/nexus/content/groups/public/"
+    }
+}
+
+ext {
+    withoutStuff = {
+        exclude group: 'org.slf4j', module: 'slf4j-log4j12'
+        exclude group: 'log4j', module: 'log4j'
+    }
+}
+
+dependencies {
+    compile('org.springframework.boot:spring-boot-starter')
+    compile("org.springframework.boot:spring-boot-starter-actuator")
+    compile("org.springframework.boot:spring-boot-starter-web")
+    compile("org.springframework.boot:spring-boot-starter-jdbc")
+    compile("org.springframework.boot:spring-boot-starter-aop")
+    compile group: 'com.baomidou', name: 'mybatis-plus', version: '2.1.0'
+    compile group: 'mysql', name: 'mysql-connector-java', version: "6.0.5"
+    compile group: 'com.vipabc.basic.common', name: 'base-web', version: "2.0.1"
+    compile group: 'com.vipabc.basic.common', name: 'base-jdbc', version: "2.0.1"
+    compile group: 'org.mybatis.spring.boot', name: 'mybatis-spring-boot-starter', version: '1.1.1'
+    compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.6.0'
+    compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.6.0'
+    compile group: 'com.baidu.disconf', name: 'disconf-client', version: '2.6.36'
+    compile group: 'com.microsoft', name: 'sqlserver.jdbc', version: '4.2'
+    compile group: 'com.alibaba.otter', name: 'canal.client', version: '1.0.12'
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+}

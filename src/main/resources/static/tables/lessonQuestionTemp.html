@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CRUD LessonQuestionTemp</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <div class="container">
+        <h1>CRUD LessonQuestionTemp</h1>
+        <p class="toolbar">
+            <a class="create btn btn-primary" href="javascript:">新增</a>
+            <span class="alert"></span>
+        </p>
+        <table id="table"
+               data-show-refresh="true"
+               data-show-columns="true"
+               data-search="true"
+               data-query-params="queryParams"
+               data-toolbar=".toolbar">
+            <thead>
+            <tr>
+                                                            <th data-field="valid">valid</th>
+                                                                                <th data-field="evaluationType">evaluationType</th>
+                                                                                <th data-field="sn">sn</th>
+                                                                                <th data-field="questionStr">questionStr</th>
+                                                                                <th data-field="testSn">testSn</th>
+                                                                                <th data-field="totalScore">totalScore</th>
+                                                                                <th data-field="inpDate">inpDate</th>
+                                                                                <th data-field="clientSn">clientSn</th>
+                                                                                <th data-field="clientLevel">clientLevel</th>
+                                                    <!---->
+                <!--<th data-field="stargazers_count">Stars</th>-->
+                <!--<th data-field="forks_count">Forks</th>-->
+                <!--<th data-field="description">Description</th>-->
+                <th data-field="action"
+                    data-align="center"
+                    data-formatter="actionFormatter"
+                    data-events="actionEvents">操作</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+
+    <div id="modal" class="modal fade">
+        <form id="formSubmit">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body form-horizontal">
+                                                                                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="valid">valid</label>
+                                <div class="col-sm-10">
+                                <input type="number" id="valid" class="form-control" name="valid" placeholder="valid">
+                                 </div>
+                            </div>
+                                                                                                                                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="evaluationType">evaluationType</label>
+                                <div class="col-sm-10">
+                                <input type="number" id="evaluationType" class="form-control" name="evaluationType" placeholder="evaluationType">
+                                 </div>
+                            </div>
+                                                                                                                                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="sn">sn</label>
+                                <div class="col-sm-10">
+                                <input type="number" id="sn" class="form-control" name="sn" placeholder="sn">
+                                 </div>
+                            </div>
+                                                                                                                                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="questionStr">questionStr</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="questionStr" name="questionStr" placeholder="questionStr">
+                            </div>
+                            </div>
+                                                                                                                                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="testSn">testSn</label>
+                                <div class="col-sm-10">
+                                <input type="number" id="testSn" class="form-control" name="testSn" placeholder="testSn">
+                                 </div>
+                            </div>
+                                                                                                                                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="totalScore">totalScore</label>
+                                <div class="col-sm-10">
+                                <input type="number" id="totalScore" class="form-control" name="totalScore" placeholder="totalScore">
+                                 </div>
+                            </div>
+                                                                                                                                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="inpDate">inpDate</label>
+                            <div class="col-sm-10">
+                                <input type="date" id="inpDate" class="form-control" name="inpDate" placeholder="inpDate">
+                            </div>
+                            </div>
+                                                                                                                                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="clientSn">clientSn</label>
+                                <div class="col-sm-10">
+                                <input type="number" id="clientSn" class="form-control" name="clientSn" placeholder="clientSn">
+                                 </div>
+                            </div>
+                                                                                                                                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="clientLevel">clientLevel</label>
+                                <div class="col-sm-10">
+                                <input type="number" id="clientLevel" class="form-control" name="clientLevel" placeholder="clientLevel">
+                                 </div>
+                            </div>
+                                                                    
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary submit">保存</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+        </form>
+    </div>
+                    <script>
+                        (function($){
+                            var Controller = $.initController({url:"lessonQuestionTemp/"});
+                        })(jQuery);
+                    </script>
+</body>
+</html>

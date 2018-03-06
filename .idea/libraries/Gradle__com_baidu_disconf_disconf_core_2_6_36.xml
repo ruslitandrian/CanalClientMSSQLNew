@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.baidu.disconf:disconf-core:2.6.36">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.baidu.disconf/disconf-core/2.6.36/7e9d0d769591014a1eb06ea0d3c8dcaeb913b579/disconf-core-2.6.36.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.baidu.disconf/disconf-core/2.6.36/f5c5206978a299c4a0a44fee38d53653ca4ea4de/disconf-core-2.6.36-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

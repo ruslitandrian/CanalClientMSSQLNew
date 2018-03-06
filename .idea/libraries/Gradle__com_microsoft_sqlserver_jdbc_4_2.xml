@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: com.microsoft:sqlserver.jdbc:4.2">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.microsoft/sqlserver.jdbc/4.2/4d8a1bc64ddf2099dbc2a171e113f6654a1c02a6/sqlserver.jdbc-4.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

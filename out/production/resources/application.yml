@@ -1,0 +1,25 @@
+server:
+ port: 8090
+mybatis:
+  mapper-locations: classpath:xml/*Mapper.xml
+
+vipcoder:
+  datasource:
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    maximumPoolSize: 10
+    defaultTarget: w_0
+    testOnBorrow: true
+    initialSize: 1
+    validationQuery: select 1
+     #写库方法前缀
+    writePrefix: insert*,update*,delete*
+    targets:
+      w_0:
+        url: jdbc:sqlserver://172.16.2.65:1433; DatabaseName=BI_Canal
+        username: bi_canal_acct
+        password: n5r6H2K'Q<e@
+        master: true
+      r_0:
+        url: jdbc:sqlserver://172.16.2.65:1433; DatabaseName=BI_Canal
+        username: bi_canal_acct
+        password: n5r6H2K'Q<e@
